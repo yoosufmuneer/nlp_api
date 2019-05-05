@@ -25,7 +25,7 @@ SECRET_KEY = '+y^qer#%%ou2o5$su)w6e&#upk8d4rca@-ovn6ovk8i%bec+%q'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['http://pfnlpapi.herokuapp.com/']
+ALLOWED_HOSTS = []
 
 
 # Application definition
