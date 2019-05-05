@@ -9,6 +9,7 @@ from django.views import View
 from django.views.decorators.csrf import csrf_exempt
 from django.utils.decorators import method_decorator
 import json
+from textblob import TextBlob
 
 
 from nltk.tokenize import word_tokenize, sent_tokenize
@@ -34,8 +35,10 @@ class MyDescription(View):
         data = json.loads(data)
         try:
             field = data['description_field']
-            tokens = word_tokenize(data["description_field"])
-            response = json.dumps({"tags": tokens})
+            blob1 = TextBlob(field)
+            #tokens = word_tokenize(data["description_field"])
+
+            response = json.dumps({"polarity": blob1.sentiment.polarity})
         except:
             response = json.dumps({"Error": "Invalid Description"})
             
