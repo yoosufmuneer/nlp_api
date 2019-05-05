@@ -14,6 +14,7 @@ from textblob import TextBlob
 
 
 class MyDescription(View):
+    #Handle GET Requests
     def get(self, request):
         return HttpResponse({"Sample"}, content_type='text/json')
 
@@ -23,6 +24,7 @@ class MyDescription(View):
     def dispatch(self, request, *args, **kwargs):
         return super(MyDescription, self).dispatch(request, *args, **kwargs)
 
+    #Handle POST Requests
     def post(self, request):
         data = request.body.decode('utf8')
         data = json.loads(data)
@@ -31,7 +33,7 @@ class MyDescription(View):
             blob1 = TextBlob(field)
             print("Description processed")
 
-            response = json.dumps({"polarity": blob1.sentiment.polarity})
+            response = json.dumps({"Polarity": blob1.sentiment.polarity})
         except:
             response = json.dumps({"Error": "Invalid Description"})
             
