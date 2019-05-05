@@ -1,1 +1,1 @@
-web: nlp_api.wsgi --log-file -
+web: gunicorn nlp_api.wsgi --log-file -
