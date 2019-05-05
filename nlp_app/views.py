@@ -15,7 +15,7 @@ from textblob import TextBlob
 
 class MyDescription(View):
     def get(self, request):
-        return HttpResponse({"Hello"}, content_type='text/json')
+        return HttpResponse({"Sample"}, content_type='text/json')
 
 
     # To turn off CSRF validation
