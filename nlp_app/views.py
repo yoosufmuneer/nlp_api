@@ -29,6 +29,7 @@ class MyDescription(View):
         try:
             field = data['description_field']
             blob1 = TextBlob(field)
+            print("Description processed")
 
             response = json.dumps({"polarity": blob1.sentiment.polarity})
         except:
