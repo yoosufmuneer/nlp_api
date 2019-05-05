@@ -26,6 +26,7 @@ SECRET_KEY = '+y^qer#%%ou2o5$su)w6e&#upk8d4rca@-ovn6ovk8i%bec+%q'
 DEBUG = True
 
 ALLOWED_HOSTS = [
+    '127.0.0.1',
     'http://pfnlpapi.herokuapp.com/'
     ]
 
