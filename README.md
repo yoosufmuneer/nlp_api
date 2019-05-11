@@ -1,6 +1,8 @@
 # nlp_api
 
-###### 1. install python3 & django2
+Takes a description via post and returns the polarity of it.
+
+###### 1. install python & django
 
 ###### 2. Install NLTK
 
